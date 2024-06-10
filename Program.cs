@@ -18,32 +18,13 @@ class Program
             return;
         }
 
-        var processMonitor = new ProcessMonitor();
-
-        using (var cts = new CancellationTokenSource())
+        try
         {
-            var keyButtonTask = Task.Run(() =>
-            {
-            while (true)
-            {
-                if (Console.ReadKey(true).Key == ConsoleKey.Q)
-                {
-                    cts.Cancel();
-                    break;
-                }
-            }
-        });
-
-        Console.WriteLine($"Monitoring process: {processName}, Max lifetime: {maxLifetimeMinutes} minutes, Frequency: {monitorFrequencyMinutes} minutes");
-
-            try
-            {
-                await processMonitor.StartMonitoringAsync(processName, maxLifetimeMinutes, monitorFrequencyMinutes, cts.Token);
-            }
-            catch (OperationCanceledException ex)
-            {
-                Console.WriteLine($"Status: {ex.Message}");
-            }
+            await ProcessMain.RunAsync(processName, maxLifetimeMinutes, monitorFrequencyMinutes);
+        }
+        catch (StopProgramException ex) 
+        {
+            Console.WriteLine($"Status: {ex.Message}");
         }
     }
 }
