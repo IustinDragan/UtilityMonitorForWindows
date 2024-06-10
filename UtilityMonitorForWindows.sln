@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtilityMonitorForWindows", "UtilityMonitorForWindows.csproj", "{212F1E36-D300-457C-9865-B56E97CB0624}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestProject", "..\NUnitTestProject\NUnitTestProject.csproj", "{64AED27F-4B6D-48F9-ABF7-5CB06DAD377C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{212F1E36-D300-457C-9865-B56E97CB0624}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{212F1E36-D300-457C-9865-B56E97CB0624}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{212F1E36-D300-457C-9865-B56E97CB0624}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64AED27F-4B6D-48F9-ABF7-5CB06DAD377C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64AED27F-4B6D-48F9-ABF7-5CB06DAD377C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64AED27F-4B6D-48F9-ABF7-5CB06DAD377C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64AED27F-4B6D-48F9-ABF7-5CB06DAD377C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
